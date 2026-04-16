@@ -2,5 +2,4 @@ __pycache__/
 archive/
 data/
 venv/
-*.png
 *.ipynb
