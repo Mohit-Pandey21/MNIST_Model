@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MNIST ANN Results</title>
+    <meta name="description" content="Results from the MNIST Artificial Neural Network model including accuracy, loss epochs, and layer activations.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bg-glow-1"></div>
+    <div class="bg-glow-2"></div>
+
+    <header>
+        <h1>Model Evaluation</h1>
+        <p>Comprehensive performance and feature analysis of the 3-Layer Artificial Neural Network trained on the 50,000-sample MNIST dataset.</p>
+    </header>
+
+    <div class="container">
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-title">Accuracy</div>
+                <div class="metric-value counter" data-target="94.72">0.00<span class="percent">%</span></div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-title">Precision</div>
+                <div class="metric-value counter" data-target="94.70">0.00<span class="percent">%</span></div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-title">Recall</div>
+                <div class="metric-value counter" data-target="94.63">0.00<span class="percent">%</span></div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-title">F1 Score</div>
+                <div class="metric-value counter" data-target="94.65">0.00<span class="percent">%</span></div>
+            </div>
+        </div>
+
+        <section class="gallery-section">
+            <h2 class="section-title">Performance Analytics</h2>
+            
+            <div class="charts-grid charts-grid-2">
+                <div class="image-card">
+                    <div class="img-container">
+                        <img src="loss_vs_epoch.png" alt="Training Loss vs Epoch Graph">
+                    </div>
+                    <h3>Training Loss Progress</h3>
+                    <p>Observe how the cross-entropy loss smoothly decreases over the 10 epochs, showcasing effective learning at a 1e-4 learning rate.</p>
+                </div>
+
+                <div class="image-card">
+                    <div class="img-container">
+                        <img src="confusion_matrix.png" alt="Confusion Matrix Heatmap">
+                    </div>
+                    <h3>Confusion Matrix</h3>
+                    <p>A detailed 10x10 mapping of true vs predicted labels on the test set. The strong grouping along the diagonal signifies very high predictive accuracy across all digits.</p>
+                </div>
+            </div>
+
+            <div class="charts-grid" style="margin-top: 40px;">
+                <div class="image-card">
+                    <div class="img-container">
+                        <img src="layer_wise_features.png" alt="Layer-wise Feature Activations">
+                    </div>
+                    <h3>Layer-Wise Feature Maps</h3>
+                    <p>Visualizing the internal node activations (post-ReLU) for a single MNIST digit sample passing through the architecture's 64-64-32 dense layers.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
